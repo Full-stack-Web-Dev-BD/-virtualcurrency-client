@@ -100,3 +100,20 @@
        display: none !important
    }
    .elementor-2535 .elementor-element.elementor-element-616b37e .elementor-toggle .elementor-toggle-item .elementor-tab-title .elementor-toggle-icon .elementor-toggle-icon-closed i{display:none !important} */
+ .elementor-toggle-icon-right{
+    display: none !important
+}
+
+   .elementor-toggle-item:hover{
+       position: relative !important;
+   }
+   .elementor-toggle-item:hover .elementor-tab-content:last-child{   
+    display: block !important;
+    top: 0 !important;
+    position: absolute !important;
+    width: 300px !important;
+    left: 105% !important;
+    background: #201f3a !important;
+    padding: 14px !important;
+    border-radius: 5px !important;
+   }
