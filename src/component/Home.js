@@ -1966,6 +1966,65 @@ function Home() {
           </div>
         </div>
         {/* footer replaced  */}
+
+        <div className="wrap_footer">
+          <div data-elementor-type="wp-post" data-elementor-id={169} className="elementor elementor-169" data-elementor-settings="[]">
+            <div className="elementor-section-wrap">
+              <section className="elementor-section elementor-top-section elementor-element elementor-element-a0e83a2 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="a0e83a2" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                <div className="elementor-container elementor-column-gap-default">
+                  <div className="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-1e6a05b" data-id="1e6a05b" data-element_type="column">
+                    <div className="elementor-widget-wrap elementor-element-populated">
+
+                      <section className="elementor-section elementor-inner-section elementor-element elementor-element-2fd878c elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="2fd878c" data-element_type="section">
+                        <div className="elementor-container elementor-column-gap-default">
+                          <div className="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-fd34c3c" data-id="fd34c3c" data-element_type="column">
+                            <div className="elementor-widget-wrap elementor-element-populated">
+                              <div className="elementor-element elementor-element-401ac2c elementor-shape-rounded elementor-grid-0 e-grid-align-center elementor-widget elementor-widget-social-icons" data-id="401ac2c" data-element_type="widget" data-widget_type="social-icons.default">
+                                <div className="elementor-widget-container">
+                                  <div className="elementor-social-icons-wrapper elementor-grid">
+                                    <span className="elementor-grid-item">
+                                      <a style={{ margin: '0 3px ' }} className="elementor-icon elementor-social-icon elementor-social-icon-twitter elementor-repeater-item-9446487" href="https://twitter.com/" target="_blank" rel="nofollow">
+                                        <span className="elementor-screen-only">Twitter</span>
+                                        <i className=" fab fa-twitter" /> </a>
+                                    </span>
+                                    <span className="elementor-grid-item">
+                                      <a style={{ margin: '0 3px ' }} className="elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-repeater-item-47f4947" href="https://www.instagram.com/" target="_blank" rel="nofollow">
+                                        <span className="elementor-screen-only">Telegram</span>
+                                        <i className="fab fa-telegram" /> </a>
+                                    </span>
+                                    <span className="elementor-grid-item">
+                                      <a style={{ margin: '0 3px ' }} className="elementor-icon elementor-social-icon elementor-social-icon-linkedin elementor-repeater-item-bace20f" href="https://www.linkedin.com/" target="_blank" rel="nofollow">
+                                        <span className="elementor-screen-only">Discord</span>
+                                        <i className=" fab fa-discord" /> </a>
+                                    </span>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </section>
+                      <div className="elementor-element elementor-element-230fe87 elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="230fe87" data-element_type="widget" data-widget_type="divider.default">
+                        <div className="elementor-widget-container">
+                          <div className="elementor-divider">
+                            <span className="elementor-divider-separator">
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="elementor-element elementor-element-e69fad1 elementor-widget elementor-widget-heading" data-id="e69fad1" data-element_type="widget" data-widget_type="heading.default">
+                        <div className="elementor-widget-container">
+                          <h2 style={{ color: "#292A47" }} className="elementor-heading-title elementor-size-default">Copyright © 2021.
+                            All rights reserved by Your Company.</h2>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
