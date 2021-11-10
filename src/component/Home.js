@@ -45,6 +45,7 @@ function Home() {
       element.style.display = "block"
       element.style.paddingLeft = "20px"
       element.style.marginBottom = "5px"
+      element.style.boxShadow = "0px 0px 19px 2px rgb(255 255 255 / 50%"
     } else {
       element.style.display = "none"
     }
