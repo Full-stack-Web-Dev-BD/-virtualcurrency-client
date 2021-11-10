@@ -5,11 +5,26 @@ import { Link } from 'react-router-dom'
 function Home() {
   var serverURL = "http://localhost:1337"
   const [s1Img, setS1Img] = useState('')
+  const [twitter, setTwitter] = useState("")
+  const [discord, setDiscord] = useState("")
+  const [telegram, setTelegram] = useState("")
   useEffect(async () => {
     axios.get('http://localhost:1337/section-tow-image')
       .then(res => {
         setS1Img(`${serverURL}${res.data?.file?.url}`)
         console.log(`${serverURL}${res.data?.file?.url} is my url`)
+      })
+    axios.get('http://localhost:1337/twitter-link')
+      .then(res => {
+        setTwitter(res.data?.link)
+      })
+    axios.get('http://localhost:1337/discord-link')
+      .then(res => {
+        setDiscord(res.data?.link)
+      })
+    axios.get('http://localhost:1337/telegram-link')
+      .then(res => {
+        setTelegram(res.data?.link)
       })
   }, [])
   return (
@@ -1994,17 +2009,17 @@ function Home() {
                                 <div className="elementor-widget-container">
                                   <div className="elementor-social-icons-wrapper elementor-grid">
                                     <span className="elementor-grid-item">
-                                      <a style={{ margin: '0 3px ' }} className="elementor-icon elementor-social-icon elementor-social-icon-twitter elementor-repeater-item-9446487" href="https://twitter.com/" target="_blank" rel="nofollow">
+                                      <a style={{ margin: '0 3px ' }} className="elementor-icon elementor-social-icon elementor-social-icon-twitter elementor-repeater-item-9446487" onClick={e => window.location.replace(`${twitter}`)} target="_blank" rel="nofollow">
                                         <span className="elementor-screen-only">Twitter</span>
                                         <i className=" fab fa-twitter" /> </a>
                                     </span>
                                     <span className="elementor-grid-item">
-                                      <a style={{ margin: '0 3px ' }} className="elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-repeater-item-47f4947" href="https://www.instagram.com/" target="_blank" rel="nofollow">
+                                      <a style={{ margin: '0 3px ' }} className="elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-repeater-item-47f4947" onClick={e => window.location.replace(telegram)} target="_blank" rel="nofollow">
                                         <span className="elementor-screen-only">Telegram</span>
                                         <i className="fab fa-telegram" /> </a>
                                     </span>
                                     <span className="elementor-grid-item">
-                                      <a style={{ margin: '0 3px ' }} className="elementor-icon elementor-social-icon elementor-social-icon-linkedin elementor-repeater-item-bace20f" href="https://www.linkedin.com/" target="_blank" rel="nofollow">
+                                      <a style={{ margin: '0 3px ' }} className="elementor-icon elementor-social-icon elementor-social-icon-linkedin elementor-repeater-item-bace20f" onClick={e => window.location.replace(discord)} target="_blank" rel="nofollow">
                                         <span className="elementor-screen-only">Discord</span>
                                         <i className=" fab fa-discord" /> </a>
                                     </span>
