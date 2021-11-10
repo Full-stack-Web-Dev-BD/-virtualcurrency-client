@@ -9,26 +9,27 @@ function Home() {
   const [discord, setDiscord] = useState("")
   const [telegram, setTelegram] = useState("")
   useEffect(async () => {
-    axios.get('http://localhost:1337/section-tow-image')
+    axios.get(`${serverURL}/section-tow-image`)
       .then(res => {
-        setS1Img(`${serverURL}${res.data?.file?.url}`)
         console.log(`${serverURL}${res.data?.file?.url} is my url`)
+        setS1Img(`${res.data?.file?.url}`)
       })
-    axios.get('http://localhost:1337/twitter-link')
+    axios.get(`${serverURL}/twitter-link`)
       .then(res => {
         setTwitter(res.data?.link)
       })
-    axios.get('http://localhost:1337/discord-link')
+    axios.get(`${serverURL}/discord-link`)
       .then(res => {
         setDiscord(res.data?.link)
       })
-    axios.get('http://localhost:1337/telegram-link')
+    axios.get(`${serverURL}/telegram-link`)
       .then(res => {
         setTelegram(res.data?.link)
       })
   }, [])
   return (
     <div className="">
+      {console.log(s1Img, twitter, discord, telegram)}
       <div className="wrap-fullwidth">
         <div data-elementor-type="wp-post" data-elementor-id={47} className="elementor elementor-47" data-elementor-settings="[]">
           <div className="elementor-section-wrap">
