@@ -25,27 +25,23 @@ function Home() {
       .then(res => {
         setTelegram(res.data?.link)
       })
-    let x = document.getElementsByClassName("elementor-tab-content")[0]
-    console.log('x is ', x)
-    document.getElementsByClassName("elementor-tab-content")[0].addEventListener("click", function () {
-      alert("Hello World!");
-    });
-    // display: block !important;
-    // top: 100% !important;
-    // width: 100% !important;
-    // background: #201f3a !important;
-    // padding: 14px !important;
-    // border-radius: 5px !important;
   }, [])
   const expandChield = (id) => {
+    var sid = id.split('-')
+    var cid = sid[sid.length - 1]
+    var chieldExpander = document.getElementById(`elementor-tab-title-${cid}`)
+    chieldExpander.style.boxShadow = "rgb(0 0 0 / 40%) 14px 16px 10px -3px"
+    // chieldExpander.style.boxShadow = "0px 17px 10px -10px rgba(0,0,0,0.4)"
+
 
     var element = document.getElementById(id)
     var isDisplay = element.style.display
     if (isDisplay !== 'block') {
       element.style.display = "block"
       element.style.paddingLeft = "20px"
+      element.style.paddingTop = "20px"
       element.style.marginBottom = "5px"
-      element.style.boxShadow = "0px 0px 19px 2px rgb(255 255 255 / 50%"
+      // element.style.boxShadow = "0px 0px 19px 2px rgb(255 255 255 / 50%"
     } else {
       element.style.display = "none"
     }
