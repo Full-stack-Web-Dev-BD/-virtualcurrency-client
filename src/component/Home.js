@@ -1,6 +1,17 @@
+import axios from 'axios';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom'
 
 function Home() {
+  var serverURL = "http://localhost:1337"
+  const [s1Img, setS1Img] = useState('')
+  useEffect(async () => {
+    axios.get('http://localhost:1337/section-tow-image')
+      .then(res => {
+        setS1Img(`${serverURL}${res.data?.file?.url}`)
+        console.log(`${serverURL}${res.data?.file?.url} is my url`)
+      })
+  }, [])
   return (
     <div className="">
       <div className="wrap-fullwidth">
@@ -273,7 +284,7 @@ function Home() {
                   <div className="elementor-widget-wrap elementor-element-populated">
                     <div className="elementor-element elementor-element-f1c0d1f elementor-widget elementor-widget-image" data-id="f1c0d1f" data-element_type="widget" data-widget_type="image.default">
                       <div className="elementor-widget-container">
-                        <img width={649} height={626} src="https://thechibiverse.com/wp-content/uploads/2021/08/ilustrator.png" className="attachment-full size-full" alt="" loading="lazy" srcSet="https://thechibiverse.com/wp-content/uploads/2021/08/ilustrator.png 649w, https://thechibiverse.com/wp-content/uploads/2021/08/ilustrator-300x289.png 300w" sizes="(max-width: 649px) 100vw, 649px" />
+                        <img width={649} height={626} src={s1Img} className="attachment-full size-full" alt="" loading="lazy" srcSet={s1Img} sizes="(max-width: 649px) 100vw, 649px" />
                       </div>
                     </div>
                   </div>
