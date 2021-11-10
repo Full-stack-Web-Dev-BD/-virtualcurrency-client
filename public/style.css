@@ -108,12 +108,17 @@
        position: relative !important;
    }
    .elementor-toggle-item:hover .elementor-tab-content:last-child{   
-    display: block !important;
-    top: 0 !important;
-    position: absolute !important;
-    width: 300px !important;
-    left: 105% !important;
+    /* display: block !important;
+    top: 100% !important;
+    width: 100% !important;
     background: #201f3a !important;
     padding: 14px !important;
-    border-radius: 5px !important;
+    border-radius: 5px !important; */
    }
+   .elementor-tab-content:last-child >p{margin:0px !important}
+
+
+   
+    /* position: absolute !important; */
+    /* left: 50% !important; */
+    /* transform:translate(-50%, 0 ); */

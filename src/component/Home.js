@@ -11,7 +11,6 @@ function Home() {
   useEffect(async () => {
     axios.get(`${serverURL}/section-tow-image`)
       .then(res => {
-        console.log(`${serverURL}${res.data?.file?.url} is my url`)
         setS1Img(`${res.data?.file?.url}`)
       })
     axios.get(`${serverURL}/twitter-link`)
@@ -26,10 +25,32 @@ function Home() {
       .then(res => {
         setTelegram(res.data?.link)
       })
+    let x = document.getElementsByClassName("elementor-tab-content")[0]
+    console.log('x is ', x)
+    document.getElementsByClassName("elementor-tab-content")[0].addEventListener("click", function () {
+      alert("Hello World!");
+    });
+    // display: block !important;
+    // top: 100% !important;
+    // width: 100% !important;
+    // background: #201f3a !important;
+    // padding: 14px !important;
+    // border-radius: 5px !important;
   }, [])
+  const expandChield = (id) => {
+
+    var element = document.getElementById(id)
+    var isDisplay = element.style.display
+    if (isDisplay !== 'block') {
+      element.style.display = "block"
+      element.style.paddingLeft = "20px"
+      element.style.marginBottom = "5px"
+    } else {
+      element.style.display = "none"
+    }
+  }
   return (
-    <div className="">
-      {console.log(s1Img, twitter, discord, telegram)}
+    <div className="" id="chll">
       <div className="wrap-fullwidth">
         <div data-elementor-type="wp-post" data-elementor-id={47} className="elementor elementor-47" data-elementor-settings="[]">
           <div className="elementor-section-wrap">
@@ -1184,7 +1205,7 @@ function Home() {
                                                     <div className="elementor-widget-container">
                                                       <div className="elementor-toggle" role="tablist">
                                                         <div className="elementor-toggle-item">
-                                                          <div id="elementor-tab-title-1021" className="elementor-tab-title" data-tab={1} role="tab" aria-controls="elementor-tab-content-1021" aria-expanded="false">
+                                                          <div onClick={e => expandChield("elementor-tab-content-1021")} id="elementor-tab-title-1021" className="elementor-tab-title" data-tab={1} role="tab" aria-controls="elementor-tab-content-1021" aria-expanded="false">
                                                             <span className="elementor-toggle-icon elementor-toggle-icon-right" aria-hidden="true">
                                                               <span className="elementor-toggle-icon-closed"><i className="fas fa-chevron-down" /></span>
                                                               <span className="elementor-toggle-icon-opened"><i className="elementor-toggle-icon-opened fas fa-chevron-up" /></span>
@@ -1214,7 +1235,7 @@ function Home() {
                                                           </div>
                                                         </div>
                                                         <div className="elementor-toggle-item">
-                                                          <div id="elementor-tab-title-1022" className="elementor-tab-title" data-tab={2} role="tab" aria-controls="elementor-tab-content-1022" aria-expanded="false">
+                                                          <div onClick={e => expandChield('elementor-tab-content-1022')} id="elementor-tab-title-1022" className="elementor-tab-title" data-tab={2} role="tab" aria-controls="elementor-tab-content-1022" aria-expanded="false">
                                                             <span className="elementor-toggle-icon elementor-toggle-icon-right" aria-hidden="true">
                                                               <span className="elementor-toggle-icon-closed"><i className="fas fa-chevron-down" /></span>
                                                               <span className="elementor-toggle-icon-opened"><i className="elementor-toggle-icon-opened fas fa-chevron-up" /></span>
@@ -1249,7 +1270,7 @@ function Home() {
                                                           </div>
                                                         </div>
                                                         <div className="elementor-toggle-item">
-                                                          <div id="elementor-tab-title-1023" className="elementor-tab-title" data-tab={3} role="tab" aria-controls="elementor-tab-content-1023" aria-expanded="false">
+                                                          <div onClick={e => expandChield('elementor-tab-content-1023')} id="elementor-tab-title-1023" className="elementor-tab-title" data-tab={3} role="tab" aria-controls="elementor-tab-content-1023" aria-expanded="false">
                                                             <span className="elementor-toggle-icon elementor-toggle-icon-right" aria-hidden="true">
                                                               <span className="elementor-toggle-icon-closed"><i className="fas fa-chevron-down" /></span>
                                                               <span className="elementor-toggle-icon-opened"><i className="elementor-toggle-icon-opened fas fa-chevron-up" /></span>
@@ -1286,7 +1307,7 @@ function Home() {
                                                           </div>
                                                         </div>
                                                         <div className="elementor-toggle-item">
-                                                          <div id="elementor-tab-title-1024" className="elementor-tab-title" data-tab={4} role="tab" aria-controls="elementor-tab-content-1024" aria-expanded="false">
+                                                          <div onClick={e => expandChield('elementor-tab-content-1024')} id="elementor-tab-title-1024" className="elementor-tab-title" data-tab={4} role="tab" aria-controls="elementor-tab-content-1024" aria-expanded="false">
                                                             <span className="elementor-toggle-icon elementor-toggle-icon-right" aria-hidden="true">
                                                               <span className="elementor-toggle-icon-closed"><i className="fas fa-chevron-down" /></span>
                                                               <span className="elementor-toggle-icon-opened"><i className="elementor-toggle-icon-opened fas fa-chevron-up" /></span>
@@ -1344,7 +1365,7 @@ function Home() {
                                                     <div className="elementor-widget-container">
                                                       <div className="elementor-toggle" role="tablist">
                                                         <div className="elementor-toggle-item">
-                                                          <div id="elementor-tab-title-1631" className="elementor-tab-title" data-tab={1} role="tab" aria-controls="elementor-tab-content-1631" aria-expanded="false">
+                                                          <div onClick={e => expandChield('elementor-tab-content-1631')} id="elementor-tab-title-1631" className="elementor-tab-title" data-tab={1} role="tab" aria-controls="elementor-tab-content-1631" aria-expanded="false">
                                                             <span className="elementor-toggle-icon elementor-toggle-icon-right" aria-hidden="true">
                                                               <span className="elementor-toggle-icon-closed"><i className="fas fa-chevron-down" /></span>
                                                               <span className="elementor-toggle-icon-opened"><i className="elementor-toggle-icon-opened fas fa-chevron-up" /></span>
@@ -1374,7 +1395,7 @@ function Home() {
                                                           </div>
                                                         </div>
                                                         <div className="elementor-toggle-item">
-                                                          <div id="elementor-tab-title-1632" className="elementor-tab-title" data-tab={2} role="tab" aria-controls="elementor-tab-content-1632" aria-expanded="false">
+                                                          <div onClick={e => expandChield('elementor-tab-content-1632')} id="elementor-tab-title-1632" className="elementor-tab-title" data-tab={2} role="tab" aria-controls="elementor-tab-content-1632" aria-expanded="false">
                                                             <span className="elementor-toggle-icon elementor-toggle-icon-right" aria-hidden="true">
                                                               <span className="elementor-toggle-icon-closed"><i className="fas fa-chevron-down" /></span>
                                                               <span className="elementor-toggle-icon-opened"><i className="elementor-toggle-icon-opened fas fa-chevron-up" /></span>
@@ -1409,7 +1430,7 @@ function Home() {
                                                           </div>
                                                         </div>
                                                         <div className="elementor-toggle-item">
-                                                          <div id="elementor-tab-title-1633" className="elementor-tab-title" data-tab={3} role="tab" aria-controls="elementor-tab-content-1633" aria-expanded="false">
+                                                          <div onClick={e => expandChield('elementor-tab-content-1633')} id="elementor-tab-title-1633" className="elementor-tab-title" data-tab={3} role="tab" aria-controls="elementor-tab-content-1633" aria-expanded="false">
                                                             <span className="elementor-toggle-icon elementor-toggle-icon-right" aria-hidden="true">
                                                               <span className="elementor-toggle-icon-closed"><i className="fas fa-chevron-down" /></span>
                                                               <span className="elementor-toggle-icon-opened"><i className="elementor-toggle-icon-opened fas fa-chevron-up" /></span>
@@ -1446,7 +1467,7 @@ function Home() {
                                                           </div>
                                                         </div>
                                                         <div className="elementor-toggle-item">
-                                                          <div id="elementor-tab-title-1634" className="elementor-tab-title" data-tab={4} role="tab" aria-controls="elementor-tab-content-1634" aria-expanded="false">
+                                                          <div onClick={e => expandChield('elementor-tab-content-1634')} id="elementor-tab-title-1634" className="elementor-tab-title" data-tab={4} role="tab" aria-controls="elementor-tab-content-1634" aria-expanded="false">
                                                             <span className="elementor-toggle-icon elementor-toggle-icon-right" aria-hidden="true">
                                                               <span className="elementor-toggle-icon-closed"><i className="fas fa-chevron-down" /></span>
                                                               <span className="elementor-toggle-icon-opened"><i className="elementor-toggle-icon-opened fas fa-chevron-up" /></span>
@@ -1504,7 +1525,7 @@ function Home() {
                                                     <div className="elementor-widget-container">
                                                       <div className="elementor-toggle" role="tablist">
                                                         <div className="elementor-toggle-item">
-                                                          <div id="elementor-tab-title-1481" className="elementor-tab-title" data-tab={1} role="tab" aria-controls="elementor-tab-content-1481" aria-expanded="false">
+                                                          <div onClick={e => expandChield('elementor-tab-content-1481')} id="elementor-tab-title-1481" className="elementor-tab-title" data-tab={1} role="tab" aria-controls="elementor-tab-content-1481" aria-expanded="false">
                                                             <span className="elementor-toggle-icon elementor-toggle-icon-right" aria-hidden="true">
                                                               <span className="elementor-toggle-icon-closed"><i className="fas fa-chevron-down" /></span>
                                                               <span className="elementor-toggle-icon-opened"><i className="elementor-toggle-icon-opened fas fa-chevron-up" /></span>
@@ -1541,7 +1562,7 @@ function Home() {
                                                           </div>
                                                         </div>
                                                         <div className="elementor-toggle-item">
-                                                          <div id="elementor-tab-title-1482" className="elementor-tab-title" data-tab={2} role="tab" aria-controls="elementor-tab-content-1482" aria-expanded="false">
+                                                          <div onClick={e => expandChield('elementor-tab-content-1482')} id="elementor-tab-title-1482" className="elementor-tab-title" data-tab={2} role="tab" aria-controls="elementor-tab-content-1482" aria-expanded="false">
                                                             <span className="elementor-toggle-icon elementor-toggle-icon-right" aria-hidden="true">
                                                               <span className="elementor-toggle-icon-closed"><i className="fas fa-chevron-down" /></span>
                                                               <span className="elementor-toggle-icon-opened"><i className="elementor-toggle-icon-opened fas fa-chevron-up" /></span>
@@ -1572,7 +1593,7 @@ function Home() {
                                                           </div>
                                                         </div>
                                                         <div className="elementor-toggle-item">
-                                                          <div id="elementor-tab-title-1483" className="elementor-tab-title" data-tab={3} role="tab" aria-controls="elementor-tab-content-1483" aria-expanded="false">
+                                                          <div onClick={e => expandChield('elementor-tab-content-1483')} id="elementor-tab-title-1483" className="elementor-tab-title" data-tab={3} role="tab" aria-controls="elementor-tab-content-1483" aria-expanded="false">
                                                             <span className="elementor-toggle-icon elementor-toggle-icon-right" aria-hidden="true">
                                                               <span className="elementor-toggle-icon-closed"><i className="fas fa-chevron-down" /></span>
                                                               <span className="elementor-toggle-icon-opened"><i className="elementor-toggle-icon-opened fas fa-chevron-up" /></span>
@@ -1607,7 +1628,7 @@ function Home() {
                                                           </div>
                                                         </div>
                                                         <div className="elementor-toggle-item">
-                                                          <div id="elementor-tab-title-1484" className="elementor-tab-title" data-tab={4} role="tab" aria-controls="elementor-tab-content-1484" aria-expanded="false">
+                                                          <div onClick={e => expandChield('elementor-tab-content-1484')} id="elementor-tab-title-1484" className="elementor-tab-title" data-tab={4} role="tab" aria-controls="elementor-tab-content-1484" aria-expanded="false">
                                                             <span className="elementor-toggle-icon elementor-toggle-icon-right" aria-hidden="true">
                                                               <span className="elementor-toggle-icon-closed"><i className="fas fa-chevron-down" /></span>
                                                               <span className="elementor-toggle-icon-opened"><i className="elementor-toggle-icon-opened fas fa-chevron-up" /></span>
@@ -1665,7 +1686,7 @@ function Home() {
                                                     <div className="elementor-widget-container">
                                                       <div className="elementor-toggle" role="tablist">
                                                         <div className="elementor-toggle-item">
-                                                          <div id="elementor-tab-title-1391" className="elementor-tab-title" data-tab={1} role="tab" aria-controls="elementor-tab-content-1391" aria-expanded="false">
+                                                          <div onClick={e => expandChield('elementor-tab-content-1391')} id="elementor-tab-title-1391" className="elementor-tab-title" data-tab={1} role="tab" aria-controls="elementor-tab-content-1391" aria-expanded="false">
                                                             <span className="elementor-toggle-icon elementor-toggle-icon-right" aria-hidden="true">
                                                               <span className="elementor-toggle-icon-closed"><i className="fas fa-chevron-down" /></span>
                                                               <span className="elementor-toggle-icon-opened"><i className="elementor-toggle-icon-opened fas fa-chevron-up" /></span>
@@ -1695,7 +1716,7 @@ function Home() {
                                                           </div>
                                                         </div>
                                                         <div className="elementor-toggle-item">
-                                                          <div id="elementor-tab-title-1392" className="elementor-tab-title" data-tab={2} role="tab" aria-controls="elementor-tab-content-1392" aria-expanded="false">
+                                                          <div onClick={e => expandChield('elementor-tab-content-1392')} id="elementor-tab-title-1392" className="elementor-tab-title" data-tab={2} role="tab" aria-controls="elementor-tab-content-1392" aria-expanded="false">
                                                             <span className="elementor-toggle-icon elementor-toggle-icon-right" aria-hidden="true">
                                                               <span className="elementor-toggle-icon-closed"><i className="fas fa-chevron-down" /></span>
                                                               <span className="elementor-toggle-icon-opened"><i className="elementor-toggle-icon-opened fas fa-chevron-up" /></span>
@@ -1730,7 +1751,7 @@ function Home() {
                                                           </div>
                                                         </div>
                                                         <div className="elementor-toggle-item">
-                                                          <div id="elementor-tab-title-1393" className="elementor-tab-title" data-tab={3} role="tab" aria-controls="elementor-tab-content-1393" aria-expanded="false">
+                                                          <div onClick={e => expandChield('elementor-tab-content-1393')} id="elementor-tab-title-1393" className="elementor-tab-title" data-tab={3} role="tab" aria-controls="elementor-tab-content-1393" aria-expanded="false">
                                                             <span className="elementor-toggle-icon elementor-toggle-icon-right" aria-hidden="true">
                                                               <span className="elementor-toggle-icon-closed"><i className="fas fa-chevron-down" /></span>
                                                               <span className="elementor-toggle-icon-opened"><i className="elementor-toggle-icon-opened fas fa-chevron-up" /></span>
@@ -1767,7 +1788,7 @@ function Home() {
                                                           </div>
                                                         </div>
                                                         <div className="elementor-toggle-item">
-                                                          <div id="elementor-tab-title-1394" className="elementor-tab-title" data-tab={4} role="tab" aria-controls="elementor-tab-content-1394" aria-expanded="false">
+                                                          <div onClick={e => expandChield('elementor-tab-content-1394')} id="elementor-tab-title-1394" className="elementor-tab-title" data-tab={4} role="tab" aria-controls="elementor-tab-content-1394" aria-expanded="false">
                                                             <span className="elementor-toggle-icon elementor-toggle-icon-right" aria-hidden="true">
                                                               <span className="elementor-toggle-icon-closed"><i className="fas fa-chevron-down" /></span>
                                                               <span className="elementor-toggle-icon-opened"><i className="elementor-toggle-icon-opened fas fa-chevron-up" /></span>
@@ -1825,7 +1846,7 @@ function Home() {
                                                     <div className="elementor-widget-container">
                                                       <div className="elementor-toggle" role="tablist">
                                                         <div className="elementor-toggle-item">
-                                                          <div id="elementor-tab-title-2191" className="elementor-tab-title" data-tab={1} role="tab" aria-controls="elementor-tab-content-2191" aria-expanded="false" tabIndex={-1} aria-selected="false">
+                                                          <div onClick={e => expandChield('elementor-tab-content-2191')} id="elementor-tab-title-2191" className="elementor-tab-title" data-tab={1} role="tab" aria-controls="elementor-tab-content-2191" aria-expanded="false" tabIndex={-1} aria-selected="false">
                                                             <span className="elementor-toggle-icon elementor-toggle-icon-right" aria-hidden="true">
                                                               <span className="elementor-toggle-icon-closed"><i className="fas fa-chevron-down" /></span>
                                                               <span className="elementor-toggle-icon-opened"><i className="elementor-toggle-icon-opened fas fa-chevron-up" /></span>
@@ -1860,7 +1881,7 @@ function Home() {
                                                           </div>
                                                         </div>
                                                         <div className="elementor-toggle-item">
-                                                          <div id="elementor-tab-title-2192" className="elementor-tab-title" data-tab={2} role="tab" aria-controls="elementor-tab-content-2192" aria-expanded="false">
+                                                          <div onClick={e => expandChield('elementor-tab-content-2192')} id="elementor-tab-title-2192" className="elementor-tab-title" data-tab={2} role="tab" aria-controls="elementor-tab-content-2192" aria-expanded="false">
                                                             <span className="elementor-toggle-icon elementor-toggle-icon-right" aria-hidden="true">
                                                               <span className="elementor-toggle-icon-closed"><i className="fas fa-chevron-down" /></span>
                                                               <span className="elementor-toggle-icon-opened"><i className="elementor-toggle-icon-opened fas fa-chevron-up" /></span>
@@ -1891,7 +1912,7 @@ function Home() {
                                                           </div>
                                                         </div>
                                                         <div className="elementor-toggle-item">
-                                                          <div id="elementor-tab-title-2193" className="elementor-tab-title" data-tab={3} role="tab" aria-controls="elementor-tab-content-2193" aria-expanded="false">
+                                                          <div onClick={e => expandChield('elementor-tab-content-2193')} id="elementor-tab-title-2193" className="elementor-tab-title" data-tab={3} role="tab" aria-controls="elementor-tab-content-2193" aria-expanded="false">
                                                             <span className="elementor-toggle-icon elementor-toggle-icon-right" aria-hidden="true">
                                                               <span className="elementor-toggle-icon-closed"><i className="fas fa-chevron-down" /></span>
                                                               <span className="elementor-toggle-icon-opened"><i className="elementor-toggle-icon-opened fas fa-chevron-up" /></span>
@@ -1928,7 +1949,7 @@ function Home() {
                                                           </div>
                                                         </div>
                                                         <div className="elementor-toggle-item">
-                                                          <div id="elementor-tab-title-2194" className="elementor-tab-title" data-tab={4} role="tab" aria-controls="elementor-tab-content-2194" aria-expanded="false">
+                                                          <div onClick={e => expandChield('elementor-tab-content-2194')} id="elementor-tab-title-2194" className="elementor-tab-title" data-tab={4} role="tab" aria-controls="elementor-tab-content-2194" aria-expanded="false">
                                                             <span className="elementor-toggle-icon elementor-toggle-icon-right" aria-hidden="true">
                                                               <span className="elementor-toggle-icon-closed"><i className="fas fa-chevron-down" /></span>
                                                               <span className="elementor-toggle-icon-opened"><i className="elementor-toggle-icon-opened fas fa-chevron-up" /></span>
