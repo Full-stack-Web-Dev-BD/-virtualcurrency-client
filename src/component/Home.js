@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom'
 
 function Home() {
-  var serverURL = "http://localhost:1337"
+  var serverURL = "https://joetarantinoapp-backend.herokuapp.com"
   const [s1Img, setS1Img] = useState('')
   const [twitter, setTwitter] = useState("")
   const [discord, setDiscord] = useState("")
