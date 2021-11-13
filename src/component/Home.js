@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom'
+import Slides from './slider/Slides'
 
 function Home() {
   var serverURL = "https://joetarantinoapp-backend.herokuapp.com"
@@ -181,7 +182,17 @@ function Home() {
             <section className="elementor-section elementor-top-section elementor-element elementor-element-b52e3d8 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="b52e3d8" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
               <div className="elementor-background-overlay" />
               <div className="elementor-container elementor-column-gap-default">
-                <div className="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-7a12e01" data-id="7a12e01" data-element_type="column">
+                <div style={{ width: '100%', }}>
+                  <h1 className="text-center" style={{ textAlign: "center", color: 'white', fontSize: '60px' }}>Site Title</h1>
+                  <div>
+                    <Slides />
+
+                  </div>
+
+                </div>
+
+
+                {/* <div className="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-7a12e01" data-id="7a12e01" data-element_type="column">
                   <div className="elementor-widget-wrap elementor-element-populated">
                     <div className="elementor-element elementor-element-3ac583d elementor-widget elementor-widget-text-editor" data-id="3ac583d" data-element_type="widget" data-widget_type="text-editor.default">
                       <div className="elementor-widget-container">
@@ -266,7 +277,7 @@ function Home() {
                       </div>
                     </section>
                   </div>
-                </div>
+                </div> */}
               </div>
             </section>
             <section className="elementor-section elementor-top-section elementor-element elementor-element-c3bb64f elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="c3bb64f" data-element_type="section" id="about" data-settings="{&quot;background_background&quot;:&quot;gradient&quot;}">
