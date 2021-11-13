@@ -6,23 +6,31 @@ import Navigation from './Navigation'
 const images = [
     {
         type: 'img',
-        url: 'https://fiverr-res.cloudinary.com/image/upload/q_auto,f_auto/v1/secured-attachments/message/attachments/0929784252ece38b2328cf77e51c9a91-1636732361638/R1-removebg-preview%20%281%29.png?__cld_token__=exp=1636754028~hmac=08371b440a7047d0a251b953d79d5e1081ac1e6aa2b6bf689df0f6103f2717e4',
+        url: 'https://raw.githubusercontent.com/Full-stack-Web-Dev-BD/virtualcurrency-client/master/src/component/slider/files/img1.png',
     },
     {
         type: 'img',
-        url: 'https://fiverr-res.cloudinary.com/image/upload/q_auto,f_auto/v1/secured-attachments/message/attachments/0929784252ece38b2328cf77e51c9a91-1636732361638/R1-removebg-preview%20%281%29.png?__cld_token__=exp=1636754028~hmac=08371b440a7047d0a251b953d79d5e1081ac1e6aa2b6bf689df0f6103f2717e4',
+        url: 'https://raw.githubusercontent.com/Full-stack-Web-Dev-BD/virtualcurrency-client/master/src/component/slider/files/img1.png',
     },
     {
         type: 'img',
-        url: 'https://fiverr-res.cloudinary.com/image/upload/q_auto,f_auto/v1/secured-attachments/message/attachments/0929784252ece38b2328cf77e51c9a91-1636732361638/R1-removebg-preview%20%281%29.png?__cld_token__=exp=1636754028~hmac=08371b440a7047d0a251b953d79d5e1081ac1e6aa2b6bf689df0f6103f2717e4',
+        url: 'https://raw.githubusercontent.com/Full-stack-Web-Dev-BD/virtualcurrency-client/master/src/component/slider/files/img1.png',
     },
     {
         type: 'img',
-        url: 'https://fiverr-res.cloudinary.com/image/upload/q_auto,f_auto/v1/secured-attachments/message/attachments/0929784252ece38b2328cf77e51c9a91-1636732361638/R1-removebg-preview%20%281%29.png?__cld_token__=exp=1636754028~hmac=08371b440a7047d0a251b953d79d5e1081ac1e6aa2b6bf689df0f6103f2717e4',
+        url: 'https://raw.githubusercontent.com/Full-stack-Web-Dev-BD/virtualcurrency-client/master/src/component/slider/files/img1.png',
     },
     {
         type: 'img',
-        url: 'https://fiverr-res.cloudinary.com/image/upload/q_auto,f_auto/v1/secured-attachments/message/attachments/0929784252ece38b2328cf77e51c9a91-1636732361638/R1-removebg-preview%20%281%29.png?__cld_token__=exp=1636754028~hmac=08371b440a7047d0a251b953d79d5e1081ac1e6aa2b6bf689df0f6103f2717e4',
+        url: 'https://raw.githubusercontent.com/Full-stack-Web-Dev-BD/virtualcurrency-client/master/src/component/slider/files/img1.png',
+    },
+    {
+        type: 'img',
+        url: 'https://raw.githubusercontent.com/Full-stack-Web-Dev-BD/virtualcurrency-client/master/src/component/slider/files/img1.png',
+    },
+    {
+        type: 'img',
+        url: 'https://raw.githubusercontent.com/Full-stack-Web-Dev-BD/virtualcurrency-client/master/src/component/slider/files/img1.png',
     },
 
 ]
