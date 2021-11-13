@@ -3,6 +3,15 @@
     margin: 0;
     box-sizing: border-box;
 }
+.video-slide{
+    background-color: #000;
+    position: relative;
+}
+.video-slide video{
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+}
 .slider-container {
     display: flex;
     justify-content: center;

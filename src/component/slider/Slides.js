@@ -1,36 +1,37 @@
 import { useState } from 'react'
 import Slide from './Slide'
 import Navigation from './Navigation'
-
+import img1 from './files/img1.png'
+import vid2 from './files/vid2.mp4'
 
 const images = [
     {
         type: 'img',
-        url: 'https://raw.githubusercontent.com/Full-stack-Web-Dev-BD/virtualcurrency-client/master/src/component/slider/files/img1.png',
+        url: img1,
     },
     {
         type: 'img',
-        url: 'https://raw.githubusercontent.com/Full-stack-Web-Dev-BD/virtualcurrency-client/master/src/component/slider/files/img1.png',
+        url: img1,
     },
     {
         type: 'img',
-        url: 'https://raw.githubusercontent.com/Full-stack-Web-Dev-BD/virtualcurrency-client/master/src/component/slider/files/img1.png',
+        url: img1,
+    },
+    {
+        type: 'video',
+        url: vid2,
     },
     {
         type: 'img',
-        url: 'https://raw.githubusercontent.com/Full-stack-Web-Dev-BD/virtualcurrency-client/master/src/component/slider/files/img1.png',
+        url: img1,
     },
     {
         type: 'img',
-        url: 'https://raw.githubusercontent.com/Full-stack-Web-Dev-BD/virtualcurrency-client/master/src/component/slider/files/img1.png',
+        url: img1,
     },
     {
         type: 'img',
-        url: 'https://raw.githubusercontent.com/Full-stack-Web-Dev-BD/virtualcurrency-client/master/src/component/slider/files/img1.png',
-    },
-    {
-        type: 'img',
-        url: 'https://raw.githubusercontent.com/Full-stack-Web-Dev-BD/virtualcurrency-client/master/src/component/slider/files/img1.png',
+        url: img1,
     },
 
 ]
